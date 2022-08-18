@@ -15,6 +15,9 @@ public:
 	// Sets default values for this pawn's properties
 	ABasePawn();
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	int32 Health = 100;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

@@ -19,6 +19,9 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent *PlayerInputComponent) override;
 
+protected:
+	virtual void BeginPlay() override;
+
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class USpringArmComponent *SpringArm;
@@ -29,5 +32,11 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 	float Speed = 500.f;
 
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float TurnRate = 85.f;
+
 	void Move(float Value);
+	void Turn(float Value);
+
+	APlayerController* PlayerControllerRef;
 };

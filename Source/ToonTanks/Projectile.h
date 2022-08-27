@@ -26,4 +26,13 @@ public:
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Combat")
 	UStaticMeshComponent *ProjectileMesh;
+
+	UPROPERTY(VisibleAnywhere, Category = "Movement")
+	class UProjectileMovementComponent *MovementComponent;
+
+	UPROPERTY(EditAnywhere)
+	float InitialSpeed = 100.f;
+
+	UPROPERTY(EditAnywhere)
+	float MaxSpeed = 1000.f;
 };

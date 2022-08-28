@@ -35,4 +35,7 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	float MaxSpeed = 1000.f;
+
+	UFUNCTION()
+	void OnHit(UPrimitiveComponent *HitComp, AActor *OtherActor, UPrimitiveComponent *OtherComp, FVector NormalInpulse, const FHitResult &Hit);
 };

@@ -21,6 +21,10 @@ public:
 
 	virtual void Tick(float DeltaTime) override;
 
+	void HandleDestruction();
+
+	APlayerController *GetTankPlayerController() const { return TankPlayerController; }
+
 protected:
 	virtual void BeginPlay() override;
 
@@ -40,5 +44,5 @@ private:
 	void Move(float Value);
 	void Turn(float Value);
 
-	APlayerController* PlayerControllerRef;
+	APlayerController *TankPlayerController;
 };
